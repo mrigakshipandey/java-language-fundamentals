@@ -56,3 +56,41 @@ For non-linear path of execution:
 3. Logic Operators
 4. Block statements
 5. Switch
+### Working with Strings
+Strings are stored by reference so "==" operator might return false even though the value is same,
+In that case use .equals(), but since it does character by character comparision it might be a little expensive
+Consider using .intern() for specially long strings
+
+Similary use StringBuilder when a lot of string modifications are required
+
+### String Formatting
+Fromat Conversions:
+1. d Integral
+2. x Hex
+3. f Floating point
+4. e Scientific Notation
+5. s String
+
+Format Flag:
+1. %#x, 32 -> 0x20
+2. %4d -> adds spaces to make up 4 characters, %04d -> adds 0s to make up for 4 characters
+3. %,d -> adds culture specific commas, %,.2f -> will additionally add 2 decimal places
+4. % d -> moves only positive numbers one char to the right
+5. %+d -> always shows sign for decimal
+6. %(d -> shows negative values withouth sign in parenthesis
+7. %3$d -> displays the int with third index
+8. %<d -> uses the same value as the previous specifier
+
+### Date and Time
+Instant
+Local Date Time
+Zoned Date Time
+Date Time Formatter (.format() .parse())
+Duration (Precise nanaoseconds)
+Period (Human time)
+	
+Create a UTC clock and keep everything relative to it
+## Handeling Exceptions in Java
+Try with resources for autocloseable interfaces, when you don't want to handle more exceptions in finally
+With multiple catches, it will go in fifo, so use specific expections first and less specific ones after that
+All runtime exceptions are unchecked exceptions
