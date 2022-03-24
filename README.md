@@ -1,4 +1,4 @@
-# java-language-fundamentals
+# javaLanguageFundamentals
 ## Modern Java: The Big Picture
 ### Introducing the Java Platform
 Java Platform has 3 parts:
